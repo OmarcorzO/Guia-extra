@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>gps</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <label (click)="locate()" class="location">Obtener Ubicación</label>
+  <ion-icon name="compass"></ion-icon>
+
+  <ion-list>
+    <ion-item
+      *ngFor="let location of locationSearched"
+      (click)="selectLocation(location)"
+    >
+      <ion-label>
+        <h2>{{location.city}}</h2>
+        <p>{{location.address}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

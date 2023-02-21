@@ -1,0 +1,10 @@
+{
+  "name": "extra",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}
